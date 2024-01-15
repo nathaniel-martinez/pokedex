@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 
 //selectable list of trainers
 app.get("/trainers", (req, res) => {
-	let selectorPath = pathFinder.getViewsPath() + path.sep + "selector.css"
+	let selectorPath = pathFinder.getViewsPath() + path.sep + "selector.ejs"
 
 	res.set('Content-Type', 'text/html');
 	res.sendFile(selectorPath);
