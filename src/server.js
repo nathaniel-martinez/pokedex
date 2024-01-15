@@ -5,6 +5,11 @@ const app = express();
 const port = 3000;
 //const port = readPort(); write readPort function to read port from configuration file
 
+
+//include the public path
+console.log(pathFinder.getStylePath());
+app.use("/style", express.static(pathFinder.getStylePath()));
+
 app.get("/", (req, res) => {
 	res.redirect("trainers");
 });

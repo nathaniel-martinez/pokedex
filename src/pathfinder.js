@@ -23,4 +23,13 @@ function getViewsPath(){
 	return getLocalRoot() + path.sep + "views";
 }
 
-module.exports = { getViewsPath };
+/* This function finds the path of the style directory regardless of operating system or
+ * current filesystem location as long as the filesystem location is inside the project
+ * @param: None
+ * @output: Absolute path of public directory
+ */
+function getStylePath(){
+	return getLocalRoot() + path.sep + "public" + path.sep + "style";
+}
+
+module.exports = { getViewsPath, getStylePath };
