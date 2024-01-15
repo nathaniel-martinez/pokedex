@@ -1,11 +1,9 @@
 const path = require("path");
+const pathFinder = require("." + path.sep + "pathfinder");
 const express = require("express");
 const app = express();
 const port = 3000;
 //const port = readPort(); write readPort function to read port from configuration file
-
-
-var viewsPath = path.resolve(".." + path.sep + "views");
 
 app.get("/", (req, res) => {
 	res.redirect("trainers");
@@ -13,7 +11,7 @@ app.get("/", (req, res) => {
 
 //selectable list of trainers
 app.get("/trainers", (req, res) => {
-	let selectorPath = path.join(viewsPath, "selector.ejs");
+	let selectorPath = pathFinder.getViewsPath() + path.sep + "selector.css"
 
 	res.set('Content-Type', 'text/html');
 	res.sendFile(selectorPath);
