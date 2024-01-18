@@ -5,10 +5,9 @@ const app = express();
 const port = 3000;
 //const port = readPort(); write readPort function to read port from configuration file
 
-
-//include the public path
-console.log(pathFinder.getStylePath());
-app.use("/style", express.static(pathFinder.getStylePath()));
+//Add public styling files
+//app.use("/public", express.static(pathFinder.getStylePath()));
+//app.use("/public", express.static(pathFinder.getPublicPath()));
 
 app.get("/", (req, res) => {
 	res.redirect("trainers");
@@ -16,10 +15,18 @@ app.get("/", (req, res) => {
 
 //selectable list of trainers
 app.get("/trainers", (req, res) => {
-	let selectorPath = pathFinder.getViewsPath() + path.sep + "selector.ejs"
+	let selectorPath = pathFinder.getViewsPath() + path.sep + "selector.ejs";
 
 	res.set('Content-Type', 'text/html');
 	res.sendFile(selectorPath);
+});
+
+//link css file to trainers selector
+app.get("/trainers/style.css", (req, res) => {
+	let selectorStylePath = pathFinder.getStylePath() + path.sep + "selector.css";
+	console.log(selectorStylePath);
+	res.set('content-type', 'text/css');
+	res.sendFile(selectorStylePath);
 });
 
 //individual trainer
@@ -32,6 +39,7 @@ app.get("/:trainerName", (req, res) => {
 	res.send("<h1>trainer: " + trainerName + "</h1>");
 });
 
+/*
 app.get("/:trainerName/:pokemonName", (req, res) => {
 	let trainerName = req.params.trainerName;
 	let pokemonName = req.params.pokemonName;
@@ -40,6 +48,7 @@ app.get("/:trainerName/:pokemonName", (req, res) => {
 	//go back button to trainer
 	res.send("<h1>trainer: " + trainerName + "</h1>\n<h2>pokemon: " + pokemonName + "</h2>");
 });
+*/
 
 app.listen(port, () => {
 	console.log(`Pokedex server has started on port: ${port}`);

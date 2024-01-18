@@ -6,30 +6,35 @@ const path = require("path");
  * @param: None
  * @output: project's absolute local root file path
  */
-function getLocalRoot(){
+function getLocalRoot(getFirstSep=true){
 	let filePathArr = __dirname.split(path.sep);
 	let localRootI = filePathArr.findIndex(x => x == "pokedex");
-	filePathArr = filePathArr.slice(0, localRootI+1);
+	if(getFirstSep){
+		filePathArr = filePathArr.slice(0, localRootI+1);
+	}
+	else{
+		filePathArr = filePathArr.slice(1, localRootI+1);
+	}
 	let localRootPath = filePathArr.join(path.sep);
 	return localRootPath;
 }
 
 /* This function finds the path of the views directory regardless of operating system or
  * current filesystem location as long as the filesystem location is inside the project
- * @param: None
+ * @param: getFirstSep that when false removes the root file path seperator
  * @output: Absolute path of views directory
  */
-function getViewsPath(){
-	return getLocalRoot() + path.sep + "views";
+function getViewsPath(getFirstSep=true){
+	return getLocalRoot(getFirstSep) + path.sep + "views";
 }
 
 /* This function finds the path of the style directory regardless of operating system or
  * current filesystem location as long as the filesystem location is inside the project
- * @param: None
+ * @param: getFirstSep that when false removes the root file path seperator
  * @output: Absolute path of public directory
  */
-function getStylePath(){
-	return getLocalRoot() + path.sep + "public" + path.sep + "style";
+function getStylePath(getFirstSep=true){
+	return getLocalRoot(getFirstSep) + path.sep + "style";
 }
 
 module.exports = { getViewsPath, getStylePath };
