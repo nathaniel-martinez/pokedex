@@ -11,5 +11,6 @@ REM THIS SCRIPT IS RAN indirectly THROUGH THE setup.js FILE
 setlocal
 setlocal enabledelayedexpansion
 
+For %%a in ()
 where \q psqlj
 where \q psqlj
