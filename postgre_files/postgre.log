@@ -1,0 +1,6 @@
+waiting for server to start....2024-01-28 05:55:32.916 EST [4993] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-01-28 05:55:32.938 EST [4993] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-01-28 05:55:33.030 EST [4994] LOG:  database system was shut down at 2024-01-28 05:55:28 EST
+2024-01-28 05:55:33.059 EST [4993] LOG:  database system is ready to accept connections
+ done
+server started

@@ -8,17 +8,11 @@
 
 psql_path=$(which psql)
 
-
-init_dbF(){
-	echo -n $(find /opt -name initdb; find /bin -name initdb; find /usr -name initdb)
-}
-
-pg_ctlF(){
-	echo -n $(find /opt -name pg_ctl; find /bin -name pg_ctl; find /usr -name pg_ctl)
-}
-
-psqlF(){
-        echo -n $(find /opt -name psql; find /bin -name psql; find /usr -name psql)
+# This function finds the path for the command passed into it and then runs the command
+# @param: command name
+# @outpu: command is ran after finding its path
+execute(){
+	echo -n $(find /opt -name $1; find /bin -name $1; find /usr -name $1)
 }
 
 
@@ -34,14 +28,15 @@ else
 	if [ -z "$(ls ../postgre_files/postgre_data)" ]
 	then
 		echo "Creating new local postgre cluster"
-		$(init_dbF) -D $postgre_data
-		$(psqlF) -f ./setup.sql
+		$(execute initdb) -D $postgre_data
+		$(execute createdb)
+		$(execute psql) -f ./setup.sql
 	fi
 	if [ -z $(cat /etc/group | grep -G '^postgres' | cut -f 4 -d ':' | grep -E "$USER(,(.*))?$") ]
 	then
 		echo "Adding user to postgres group"
 		sudo usermod -a -G postgres $USER
 	fi
-	$(pg_ctlF) -D $postgre_data start > $postgre_log
-	$(pg_ctlF) -D $postgre_data status
+	$(execute pg_ctl) -D $postgre_data start > $postgre_log
+	$(execute pg_ctl) -D $postgre_data status
 fi
