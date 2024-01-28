@@ -25,7 +25,8 @@ psqlF(){
 if [ -z $psql_path ]
 then
 	echo "ERROR: Need to install PostgreSQL. " 1>&2
-	echo "Make sure to not install pg_ctl and initdb in /sbin" 1>&2
+	echo "1) Be sure to not install pg_ctl and initdb in /sbin" 1>&2
+    echo "2) After install be sure to reboot computer" 1>&2
 else
 	echo "Setting up PostgreSQL data cluster"
 	postgre_data="../postgre_files/postgre_data"
@@ -34,13 +35,7 @@ else
 	then
 		echo "Creating new local postgre cluster"
 		$(init_dbF) -D $postgre_data
-		$(psqlF) <<EOF
-CREATE USER pokedexuser WITH PASSWORD pokedex;
-CREATE DATABASE pokexexdb;
-REVOKE ALL ON DATABASE pokedexdb FROM pokedexuser;
-GRANT CONNECT ON DATABASE pokedexdb TO pokedexuser;
-GRANT SELECT ON ALL TABLES IN SCHEMA public TO pokedexuser;
-EOF
+		$(psqlF) -f ./setup.sql
 	fi
 	if [ -z $(cat /etc/group | grep -G '^postgres' | cut -f 4 -d ':' | grep -E "$USER(,(.*))?$") ]
 	then
