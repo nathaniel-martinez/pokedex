@@ -1,6 +1,15 @@
-waiting for server to start....2024-01-28 05:55:32.916 EST [4993] LOG:  listening on IPv4 address "127.0.0.1", port 5432
-2024-01-28 05:55:32.938 EST [4993] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2024-01-28 05:55:33.030 EST [4994] LOG:  database system was shut down at 2024-01-28 05:55:28 EST
-2024-01-28 05:55:33.059 EST [4993] LOG:  database system is ready to accept connections
+waiting for server to start....2024-01-28 13:24:31.793 EST [3177] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-01-28 13:24:31.813 EST [3177] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-01-28 13:24:32.072 EST [3178] LOG:  database system was shut down at 2024-01-28 06:00:12 EST
+2024-01-28 13:24:32.246 EST [3177] LOG:  database system is ready to accept connections
  done
 server started
+2024-01-28 13:25:32.356 EST [3177] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-01-28 13:25:32.356 EST [3177] LOG:  performing immediate shutdown because data directory lock file is invalid
+2024-01-28 13:25:32.357 EST [3177] LOG:  received immediate shutdown request
+2024-01-28 13:25:32.357 EST [3177] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-01-28 13:25:32.357 EST [3182] WARNING:  terminating connection because of crash of another server process
+2024-01-28 13:25:32.357 EST [3182] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2024-01-28 13:25:32.357 EST [3182] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2024-01-28 13:25:32.359 EST [3183] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
+2024-01-28 13:25:32.368 EST [3177] LOG:  database system is shut down
