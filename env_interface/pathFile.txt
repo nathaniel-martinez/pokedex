@@ -1,0 +1,1 @@
+/usr/share/bash-completion/completions/psql /usr/bin/psql /usr/lib/postgresql/10/bin/psql
