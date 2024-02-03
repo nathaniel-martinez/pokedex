@@ -46,7 +46,7 @@ else
 	#Getting root password to run files and edit permissions
 	loginAttempt=0
 	isLoginSuccess="false"
-	maxLogins=0
+	maxLogins=3
 	while [ $loginAttempt -lt $maxLogins ] && [ $isLoginSuccess = "false" ]
 	do
 		stty -echo
@@ -80,24 +80,6 @@ else
 	then
 		echo "Creating new local postgre cluster"
 
-		#initdbPath=$(filePaths initdb)
-		#createdbPath=$(filePaths createdb)
-		#psqlPath=$(filePaths psql)
-		#pg_ctlPath=$(filePaths pg_ctl)
-
-		#initdbPath=$(realpath $(filePaths initdb))
-		#createdbPath=$(realpath $(filePaths createdb))
-		#psqlPath=$(realpath $(filePaths psql))
-		#printf "\n\n Printing out real paths"
-		#echo $initdbPath
-		#echo $createdbPath
-		#echo $psqlPath
-
-		#Change file permissions on setup programs to current user
-		#echo $psswd | sudo -S -k chown $USER $initdbPath 2>err.txt 1>/dev/null
-		#echo $psswd | sudo -S -k chown $USER $createdbPath 2>>err.txt 1>/dev/null
-		#echo $psswd | sudo -S -k chown $USER $psqlPath 2>>err.txt 1>/dev/null
-
 		#running setup programs 
 		echo '***Init DB***'
 		$pg_ctlPath init -D $postgre_data
@@ -119,6 +101,4 @@ EOF
 		echo "Adding user to postgres group"
 		echo $psswd | sudo -S -k usermod -a -G postgres $USER
 	fi
-	#$pg_ctlPath -D $postgre_data start > $postgre_log
-	#$pg_ctlPath -D $postgre_data status
 fi

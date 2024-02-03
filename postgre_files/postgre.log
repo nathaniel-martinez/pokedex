@@ -337,3 +337,15 @@ server started
 2024-02-03 03:12:14.692 EST [5709] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
 2024-02-03 03:12:14.784 EST [5710] LOG:  database system was shut down at 2024-02-03 03:12:14 EST
 2024-02-03 03:12:14.812 EST [5709] LOG:  database system is ready to accept connections
+2024-02-03 13:25:59.720 EST [7160] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-02-03 13:25:59.736 EST [7160] LOG:  could not bind IPv6 address "::1": Permission denied
+2024-02-03 13:25:59.736 EST [7160] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2024-02-03 13:25:59.740 EST [7160] WARNING:  could not create listen socket for "localhost"
+2024-02-03 13:25:59.740 EST [7160] FATAL:  could not create any TCP/IP sockets
+2024-02-03 13:25:59.745 EST [7160] LOG:  database system is shut down
+2024-02-03 13:30:35.392 EST [7260] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-02-03 13:30:35.408 EST [7260] LOG:  could not bind IPv6 address "::1": Permission denied
+2024-02-03 13:30:35.408 EST [7260] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2024-02-03 13:30:35.408 EST [7260] WARNING:  could not create listen socket for "localhost"
+2024-02-03 13:30:35.408 EST [7260] FATAL:  could not create any TCP/IP sockets
+2024-02-03 13:30:35.415 EST [7260] LOG:  database system is shut down

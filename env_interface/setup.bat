@@ -14,18 +14,21 @@ setlocal enabledelayedexpansion
 
 REM Remember the space after call that sets ERRORLEVEL to 0
 REM Checking if postgreSQL is installed by testing if there exists subkeys in the PostgreSQL\Installations registry
+
 REG QUERY HKEY_LOCAL_MACHINE\SOFTWARE\PostgreSQL\Installations\ /S >nul && (
     echo Setting up PostgreSQL data cluster
 
     set "postgre_data=..\postgre_files\postgre_data"
     set "postgre_log=..\postgre_files\postgre.log"
-
     REM Checking if there is content in the postgre_data directory to determine if a datacluster exists there
     dir /A /B "!postgre_data!" | findstr "." >nul || (
         echo Creating new local postgre cluster
         REM finding the initdb file path
-        call :execute "\Program Files" "initdb.exe" "-D !postgre_data!" || call :execute "\Program Files (x86)" "initdb.exe" "-D !postgre_data!"
-        call :execute "\Program Files" "psql.exe" "-f .\setup.sql" || call :execute "\Program Files (x86)" "psql.exe" "-f .\setup.sql"
+        set "pg_ctlPath=empty"
+        call :filepath "\Program Files" pg_ctl.exe pg_ctlPath || call :filepath "\Program Files (x86)" pg_ctl.exe pg_ctlPath
+        "!pg_ctlPath!" -D "!postgre_data!" initdb
+        "break>!pg_ctlPath!"
+        REM"!pg_ctlPath!" -D "!postgre_data!" -l "!postgre_log!" start
     )    
     call 
 ) || (
@@ -35,6 +38,16 @@ REG QUERY HKEY_LOCAL_MACHINE\SOFTWARE\PostgreSQL\Installations\ /S >nul && (
 )
 
 EXIT \b 0
+
+REM This subroutine finds the filepath of an executable and then returns that filepath
+REM input: Filepath which has the executable, name of executable, variable to store executable path
+REM output: Filepath of executabele
+:filepath
+FOR /R %1 %%a in ("*%2*") do (
+    set "%3=%%a"
+)
+EXIt /b 1
+
 REM This subroutine finds the filepath of the executable in the parent directory and then runs that executable
 REM input: "parent directory to search for executable" "executable name" "flags and parameters of executable"
 REM output: exit code is based on wether there was a succesful execution of the executabe
