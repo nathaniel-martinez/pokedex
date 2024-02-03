@@ -46,8 +46,8 @@ else
 	#Getting root password to run files and edit permissions
 	loginAttempt=0
 	isLoginSuccess="false"
-	loginAttempts=0
-	while [ $loginAttempt -lt $loginAttempts ] && [ $isLoginSuccess = "false" ]
+	maxLogins=0
+	while [ $loginAttempt -lt $maxLogins ] && [ $isLoginSuccess = "false" ]
 	do
 		stty -echo
 		read -p "Enter root password: " psswd
@@ -56,7 +56,7 @@ else
 		if echo $psswd | sudo -S -k echo worked 2>/dev/null 1>/dev/null
 		then
 			isLoginSuccess="true"
-		elif [ $loginAttempt -eq $((loginAttempts-1)) ]
+		elif [ $loginAttempt -eq $((maxLogins-1)) ]
 		then
 			echo "root password incorrect"
 			echo "exiting script"
@@ -99,9 +99,20 @@ else
 		#echo $psswd | sudo -S -k chown $USER $psqlPath 2>>err.txt 1>/dev/null
 
 		#running setup programs 
+		echo '***Init DB***'
 		$pg_ctlPath init -D $postgre_data
+		echo '***Start Process***'
 		$pg_ctlPath -D $postgre_data -l $postgre_log start
-		$psqlPath -f ./setup.sql
+		echo '***Run Database Intrcs'
+		$psqlPath -d template1 <<-EOF
+			CREATE USER pokedexuser WITH PASSWORD 'pokedex';
+			CREATE DATABASE $USER;
+			CREATE DATABASE pokexuser;
+			CREATE DATABASE pokedexdb;
+			REVOKE ALL ON DATABASE pokedexdb FROM pokedexuser;
+			GRANT CONNECT ON DATABASE pokedexdb TO pokedexuser;
+			GRANT SELECT ON ALL TABLES IN SCHEMA public TO pokedexuser;
+EOF
 	fi
 	if [ -z $(cat /etc/group | grep -G '^postgres' | cut -f 4 -d ':' | grep -E "$USER(,(.*))?$") ]
 	then

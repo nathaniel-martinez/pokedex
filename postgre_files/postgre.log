@@ -1,15 +1,339 @@
-waiting for server to start....2024-01-28 13:24:31.793 EST [3177] LOG:  listening on IPv4 address "127.0.0.1", port 5432
-2024-01-28 13:24:31.813 EST [3177] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2024-01-28 13:24:32.072 EST [3178] LOG:  database system was shut down at 2024-01-28 06:00:12 EST
-2024-01-28 13:24:32.246 EST [3177] LOG:  database system is ready to accept connections
+waiting for server to start....2024-01-30 09:04:24.228 EST [10658] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-01-30 09:04:24.250 EST [10658] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-01-30 09:04:24.342 EST [10659] LOG:  database system was shut down at 2024-01-30 09:04:22 EST
+2024-01-30 09:04:24.461 EST [10658] LOG:  database system is ready to accept connections
  done
 server started
-2024-01-28 13:25:32.356 EST [3177] LOG:  could not open file "postmaster.pid": No such file or directory
-2024-01-28 13:25:32.356 EST [3177] LOG:  performing immediate shutdown because data directory lock file is invalid
-2024-01-28 13:25:32.357 EST [3177] LOG:  received immediate shutdown request
-2024-01-28 13:25:32.357 EST [3177] LOG:  could not open file "postmaster.pid": No such file or directory
-2024-01-28 13:25:32.357 EST [3182] WARNING:  terminating connection because of crash of another server process
-2024-01-28 13:25:32.357 EST [3182] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
-2024-01-28 13:25:32.357 EST [3182] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
-2024-01-28 13:25:32.359 EST [3183] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
-2024-01-28 13:25:32.368 EST [3177] LOG:  database system is shut down
+2024-01-30 09:08:39.852 EST [10872] FATAL:  could not open relation mapping file "global/pg_filenode.map": No such file or directory
+2024-01-30 09:09:15.274 EST [10658] LOG:  received smart shutdown request
+2024-01-30 09:09:15.275 EST [10658] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-01-30 09:09:15.279 EST [10658] LOG:  worker process: logical replication launcher (PID 10665) exited with exit code 1
+2024-01-30 09:09:15.285 EST [10660] LOG:  shutting down
+2024-01-30 09:09:15.285 EST [10660] PANIC:  could not open control file "global/pg_control": No such file or directory
+2024-01-30 09:09:20.057 EST [10658] LOG:  checkpointer process (PID 10660) was terminated by signal 6: Aborted
+2024-01-30 09:09:20.057 EST [10658] LOG:  terminating any other active server processes
+2024-01-30 09:09:20.057 EST [10664] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
+2024-01-30 09:09:20.060 EST [10658] LOG:  abnormal database system shutdown
+2024-01-30 09:09:20.080 EST [10658] LOG:  database system is shut down
+2024-01-30 09:09:27.392 EST [10920] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-01-30 09:09:27.414 EST [10920] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-01-30 09:09:27.507 EST [10921] LOG:  database system was shut down at 2024-01-30 09:09:26 EST
+2024-01-30 09:09:27.537 EST [10920] LOG:  database system is ready to accept connections
+2024-01-30 09:09:27.640 EST [10936] FATAL:  database "yescomputer" does not exist
+2024-02-03 02:23:37.354 EST [3671] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-02-03 02:23:37.398 EST [3671] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-02-03 02:23:37.489 EST [3672] LOG:  database system was shut down at 2024-02-03 02:23:36 EST
+2024-02-03 02:23:37.519 EST [3671] LOG:  database system is ready to accept connections
+2024-02-03 02:23:37.812 EST [3687] FATAL:  database "yescomputer" does not exist
+2024-02-03 02:31:12.598 EST [4038] FATAL:  could not open relation mapping file "global/pg_filenode.map": No such file or directory
+2024-02-03 02:31:38.031 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:38.688 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:38.688 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:39.345 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:39.345 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:40.002 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:40.002 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:40.659 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:40.659 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:41.316 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:41.316 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:41.973 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:41.973 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:42.630 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:42.630 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:43.287 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:43.287 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:43.944 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:43.945 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:44.601 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:44.601 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:45.258 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:45.258 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:45.915 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:45.915 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:46.571 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:46.571 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:47.224 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:47.224 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:47.880 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:47.880 EST [3677] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:31:48.290 EST [3676] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2024-02-03 02:32:12.660 EST [3671] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-02-03 02:32:12.660 EST [3671] LOG:  performing immediate shutdown because data directory lock file is invalid
+2024-02-03 02:32:12.660 EST [3671] LOG:  received immediate shutdown request
+2024-02-03 02:32:12.660 EST [3671] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-02-03 02:32:12.661 EST [3677] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
+2024-02-03 02:32:12.662 EST [3676] WARNING:  terminating connection because of crash of another server process
+2024-02-03 02:32:12.662 EST [3676] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2024-02-03 02:32:12.662 EST [3676] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2024-02-03 02:32:12.673 EST [3671] LOG:  database system is shut down
+2024-02-03 02:36:36.199 EST [4113] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-02-03 02:36:36.220 EST [4113] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-02-03 02:36:36.312 EST [4114] LOG:  database system was shut down at 2024-02-03 02:36:35 EST
+2024-02-03 02:36:36.341 EST [4113] LOG:  database system is ready to accept connections
+2024-02-03 02:36:36.442 EST [4129] ERROR:  syntax error at or near "pokedex" at character 39
+2024-02-03 02:36:36.442 EST [4129] STATEMENT:  CREATE USER pokedexuser WITH PASSWORD pokedex;
+2024-02-03 02:36:36.442 EST [4129] ERROR:  syntax error at or near "CREATE" at character 29
+2024-02-03 02:36:36.442 EST [4129] STATEMENT:  CREATE DATABASE yescomputer
+	CREATE DATABASE pokexuser;
+2024-02-03 02:36:37.048 EST [4129] ERROR:  database "pokedexdb" does not exist
+2024-02-03 02:36:37.048 EST [4129] STATEMENT:  REVOKE ALL ON DATABASE pokedexdb FROM pokedexuser;
+2024-02-03 02:36:37.049 EST [4129] ERROR:  database "pokedexdb" does not exist
+2024-02-03 02:36:37.049 EST [4129] STATEMENT:  GRANT CONNECT ON DATABASE pokedexdb TO pokedexuser;
+2024-02-03 02:36:37.050 EST [4129] ERROR:  role "pokedexuser" does not exist
+2024-02-03 02:36:37.050 EST [4129] STATEMENT:  GRANT SELECT ON ALL TABLES IN SCHEMA public TO pokedexuser;
+2024-02-03 02:56:26.300 EST [4119] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 02:56:26.328 EST [4113] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-02-03 02:56:26.328 EST [4113] LOG:  performing immediate shutdown because data directory lock file is invalid
+2024-02-03 02:56:26.328 EST [4113] LOG:  received immediate shutdown request
+2024-02-03 02:56:26.328 EST [4113] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-02-03 02:56:26.328 EST [4119] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
+2024-02-03 02:56:26.329 EST [4118] WARNING:  terminating connection because of crash of another server process
+2024-02-03 02:56:26.329 EST [4118] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2024-02-03 02:56:26.329 EST [4118] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2024-02-03 02:56:26.340 EST [4113] LOG:  database system is shut down
+2024-02-03 02:58:29.945 EST [4548] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-02-03 02:58:29.968 EST [4548] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-02-03 02:58:30.060 EST [4549] LOG:  database system was shut down at 2024-02-03 02:58:29 EST
+2024-02-03 02:58:30.089 EST [4548] LOG:  database system is ready to accept connections
+2024-02-03 02:58:30.200 EST [4564] ERROR:  syntax error at or near "pokedex" at character 39
+2024-02-03 02:58:30.200 EST [4564] STATEMENT:  CREATE USER pokedexuser WITH PASSWORD pokedex;
+2024-02-03 02:58:30.200 EST [4564] ERROR:  syntax error at or near "CREATE" at character 29
+2024-02-03 02:58:30.200 EST [4564] STATEMENT:  CREATE DATABASE yescomputer
+	CREATE DATABASE pokexuser;
+2024-02-03 02:58:30.939 EST [4564] ERROR:  database "pokedexdb" does not exist
+2024-02-03 02:58:30.939 EST [4564] STATEMENT:  REVOKE ALL ON DATABASE pokedexdb FROM pokedexuser;
+2024-02-03 02:58:30.940 EST [4564] ERROR:  database "pokedexdb" does not exist
+2024-02-03 02:58:30.940 EST [4564] STATEMENT:  GRANT CONNECT ON DATABASE pokedexdb TO pokedexuser;
+2024-02-03 02:58:30.941 EST [4564] ERROR:  role "pokedexuser" does not exist
+2024-02-03 02:58:30.941 EST [4564] STATEMENT:  GRANT SELECT ON ALL TABLES IN SCHEMA public TO pokedexuser;
+2024-02-03 03:00:19.245 EST [4737] FATAL:  could not open relation mapping file "global/pg_filenode.map": No such file or directory
+2024-02-03 03:00:30.216 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:30.873 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:30.873 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:31.530 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:31.530 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:32.187 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:32.187 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:32.844 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:32.844 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:33.498 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:33.498 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:34.153 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:34.153 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:34.808 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:34.808 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:35.463 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:35.464 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:36.119 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:36.120 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:36.775 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:36.775 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:37.430 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:37.430 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:38.086 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:38.086 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:38.740 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:38.740 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:39.395 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:39.395 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:40.051 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:40.051 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:40.460 EST [4553] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2024-02-03 03:00:40.461 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:40.461 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:41.115 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:41.116 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:41.772 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:41.772 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:42.427 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:42.427 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:43.083 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:43.083 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:43.739 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:43.739 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:44.395 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:44.395 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:45.050 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:45.050 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:45.705 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:45.706 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:46.360 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:46.360 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:47.017 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:47.017 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:47.673 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:47.674 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:48.328 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:48.328 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:48.985 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:48.985 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:49.641 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:49.641 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:50.297 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:50.297 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:50.706 EST [4553] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2024-02-03 03:00:50.707 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:50.707 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:51.363 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:51.363 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:52.020 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:52.020 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:52.677 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:52.677 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:53.334 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:53.334 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:53.991 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:53.991 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:54.646 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:54.646 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:55.303 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:55.303 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:55.960 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:55.960 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:56.617 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:56.617 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:57.274 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:57.274 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:57.931 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:57.931 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:58.586 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:58.586 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:59.242 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:59.242 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:59.899 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:00:59.899 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:01:00.556 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:01:00.556 EST [4554] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:01:00.967 EST [4553] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2024-02-03 03:01:12.205 EST [4548] LOG:  received smart shutdown request
+2024-02-03 03:01:12.205 EST [4548] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-02-03 03:01:12.205 EST [4548] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-02-03 03:01:12.206 EST [4548] LOG:  performing immediate shutdown because data directory lock file is invalid
+2024-02-03 03:01:12.206 EST [4548] LOG:  received immediate shutdown request
+2024-02-03 03:01:12.206 EST [4548] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-02-03 03:01:12.206 EST [4553] WARNING:  terminating connection because of crash of another server process
+2024-02-03 03:01:12.206 EST [4553] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2024-02-03 03:01:12.206 EST [4553] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2024-02-03 03:01:12.207 EST [4554] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
+2024-02-03 03:01:12.215 EST [4548] LOG:  database system is shut down
+2024-02-03 03:01:20.039 EST [4786] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-02-03 03:01:20.062 EST [4786] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-02-03 03:01:20.154 EST [4787] LOG:  database system was shut down at 2024-02-03 03:01:19 EST
+2024-02-03 03:01:20.182 EST [4786] LOG:  database system is ready to accept connections
+2024-02-03 03:01:20.298 EST [4802] ERROR:  syntax error at or near "CREATE" at character 29
+2024-02-03 03:01:20.298 EST [4802] STATEMENT:  CREATE DATABASE yescomputer
+	CREATE DATABASE pokexuser;
+2024-02-03 03:01:20.923 EST [4802] ERROR:  database "pokedexdb" does not exist
+2024-02-03 03:01:20.923 EST [4802] STATEMENT:  REVOKE ALL ON DATABASE pokedexdb FROM pokedexuser;
+2024-02-03 03:01:20.923 EST [4802] ERROR:  database "pokedexdb" does not exist
+2024-02-03 03:01:20.923 EST [4802] STATEMENT:  GRANT CONNECT ON DATABASE pokedexdb TO pokedexuser;
+2024-02-03 03:03:20.224 EST [4792] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:03:20.299 EST [4786] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-02-03 03:03:20.299 EST [4786] LOG:  performing immediate shutdown because data directory lock file is invalid
+2024-02-03 03:03:20.299 EST [4786] LOG:  received immediate shutdown request
+2024-02-03 03:03:20.299 EST [4786] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-02-03 03:03:20.300 EST [4792] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
+2024-02-03 03:03:20.300 EST [4791] WARNING:  terminating connection because of crash of another server process
+2024-02-03 03:03:20.300 EST [4791] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2024-02-03 03:03:20.300 EST [4791] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2024-02-03 03:03:20.306 EST [4786] LOG:  database system is shut down
+2024-02-03 03:03:22.816 EST [4993] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-02-03 03:03:22.840 EST [4993] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-02-03 03:03:22.931 EST [4994] LOG:  database system was shut down at 2024-02-03 03:03:22 EST
+2024-02-03 03:03:22.960 EST [4993] LOG:  database system is ready to accept connections
+2024-02-03 03:03:23.054 EST [5009] FATAL:  database "temple1" does not exist
+2024-02-03 03:03:37.992 EST [4997] PANIC:  could not create file "pg_wal/xlogtemp.4997": No such file or directory
+2024-02-03 03:03:41.417 EST [4993] LOG:  WAL writer process (PID 4997) was terminated by signal 6: Aborted
+2024-02-03 03:03:41.417 EST [4993] LOG:  terminating any other active server processes
+2024-02-03 03:03:41.417 EST [4998] WARNING:  terminating connection because of crash of another server process
+2024-02-03 03:03:41.417 EST [4998] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2024-02-03 03:03:41.417 EST [4998] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2024-02-03 03:03:41.418 EST [4999] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
+2024-02-03 03:03:41.420 EST [4993] LOG:  all server processes terminated; reinitializing
+2024-02-03 03:03:41.439 EST [4993] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-02-03 03:03:41.445 EST [4993] PANIC:  could not open control file "global/pg_control": No such file or directory
+2024-02-03 03:03:51.089 EST [5079] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-02-03 03:03:51.111 EST [5079] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-02-03 03:03:51.202 EST [5081] LOG:  database system was shut down at 2024-02-03 03:03:50 EST
+2024-02-03 03:03:51.255 EST [5079] LOG:  database system is ready to accept connections
+2024-02-03 03:03:53.588 EST [5096] ERROR:  database "pokedexdb" does not exist
+2024-02-03 03:03:53.588 EST [5096] STATEMENT:  REVOKE ALL ON DATABASE pokedexdb FROM pokedexuser;
+2024-02-03 03:03:53.589 EST [5096] ERROR:  database "pokedexdb" does not exist
+2024-02-03 03:03:53.589 EST [5096] STATEMENT:  GRANT CONNECT ON DATABASE pokedexdb TO pokedexuser;
+2024-02-03 03:04:51.327 EST [5086] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:04:51.973 EST [5086] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:04:51.973 EST [5086] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:04:52.619 EST [5086] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:04:52.619 EST [5086] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:04:53.277 EST [5079] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-02-03 03:04:53.277 EST [5079] LOG:  performing immediate shutdown because data directory lock file is invalid
+2024-02-03 03:04:53.277 EST [5079] LOG:  received immediate shutdown request
+2024-02-03 03:04:53.277 EST [5079] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-02-03 03:04:53.278 EST [5178] WARNING:  terminating connection because of crash of another server process
+2024-02-03 03:04:53.278 EST [5178] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2024-02-03 03:04:53.278 EST [5178] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2024-02-03 03:04:53.282 EST [5085] WARNING:  terminating connection because of crash of another server process
+2024-02-03 03:04:53.282 EST [5085] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2024-02-03 03:04:53.282 EST [5085] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2024-02-03 03:04:53.288 EST [5079] LOG:  database system is shut down
+2024-02-03 03:04:55.152 EST [5188] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-02-03 03:04:55.174 EST [5188] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-02-03 03:04:55.266 EST [5189] LOG:  database system was shut down at 2024-02-03 03:04:54 EST
+2024-02-03 03:04:55.295 EST [5188] LOG:  database system is ready to accept connections
+2024-02-03 03:04:57.326 EST [5204] ERROR:  database "pokedexdb" does not exist
+2024-02-03 03:04:57.326 EST [5204] STATEMENT:  REVOKE ALL ON DATABASE pokedexdb FROM pokedexuser;
+2024-02-03 03:04:57.326 EST [5204] ERROR:  database "pokedexdb" does not exist
+2024-02-03 03:04:57.326 EST [5204] STATEMENT:  GRANT CONNECT ON DATABASE pokedexdb TO pokedexuser;
+2024-02-03 03:05:33.741 EST [5318] FATAL:  could not open relation mapping file "global/pg_filenode.map": No such file or directory
+2024-02-03 03:05:46.084 EST [5188] LOG:  received smart shutdown request
+2024-02-03 03:05:46.084 EST [5188] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-02-03 03:05:46.090 EST [5188] LOG:  worker process: logical replication launcher (PID 5195) exited with exit code 1
+2024-02-03 03:05:46.092 EST [5190] LOG:  shutting down
+2024-02-03 03:05:46.092 EST [5190] PANIC:  could not open control file "global/pg_control": No such file or directory
+2024-02-03 03:05:46.303 EST [5188] LOG:  checkpointer process (PID 5190) was terminated by signal 6: Aborted
+2024-02-03 03:05:46.303 EST [5188] LOG:  terminating any other active server processes
+2024-02-03 03:05:46.303 EST [5194] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
+2024-02-03 03:05:46.305 EST [5188] LOG:  abnormal database system shutdown
+2024-02-03 03:05:46.307 EST [5188] LOG:  database system is shut down
+2024-02-03 03:06:00.672 EST [5368] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-02-03 03:06:00.694 EST [5368] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-02-03 03:06:00.786 EST [5369] LOG:  database system was shut down at 2024-02-03 03:05:59 EST
+2024-02-03 03:06:00.813 EST [5368] LOG:  database system is ready to accept connections
+2024-02-03 03:06:16.057 EST [5398] FATAL:  database "pokedexuser" does not exist
+2024-02-03 03:08:00.874 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:01.530 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:01.530 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:02.187 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:02.188 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:02.845 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:02.845 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:03.501 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:03.501 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:04.158 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:04.158 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:04.815 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:04.815 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:05.471 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:05.471 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:06.128 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:06.128 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:06.787 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:06.787 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:07.442 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:07.442 EST [5374] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2024-02-03 03:08:07.786 EST [5368] LOG:  received smart shutdown request
+2024-02-03 03:08:07.786 EST [5368] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-02-03 03:08:07.786 EST [5368] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-02-03 03:08:07.786 EST [5368] LOG:  performing immediate shutdown because data directory lock file is invalid
+2024-02-03 03:08:07.787 EST [5368] LOG:  received immediate shutdown request
+2024-02-03 03:08:07.787 EST [5368] LOG:  could not open file "postmaster.pid": No such file or directory
+2024-02-03 03:08:07.788 EST [5373] WARNING:  terminating connection because of crash of another server process
+2024-02-03 03:08:07.788 EST [5373] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2024-02-03 03:08:07.788 EST [5373] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2024-02-03 03:08:07.790 EST [5374] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
+2024-02-03 03:08:07.796 EST [5368] LOG:  database system is shut down
+2024-02-03 03:12:14.670 EST [5709] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-02-03 03:12:14.692 EST [5709] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-02-03 03:12:14.784 EST [5710] LOG:  database system was shut down at 2024-02-03 03:12:14 EST
+2024-02-03 03:12:14.812 EST [5709] LOG:  database system is ready to accept connections
