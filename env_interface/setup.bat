@@ -27,9 +27,9 @@ REG QUERY HKEY_LOCAL_MACHINE\SOFTWARE\PostgreSQL\Installations\ /S >nul && (
         set "pg_ctlPath=empty"
         call :filepath "\Program Files" pg_ctl.exe pg_ctlPath || call :filepath "\Program Files (x86)" pg_ctl.exe pg_ctlPath
         "!pg_ctlPath!" -D "!postgre_data!" initdb
-        "break>!pg_ctlPath!"
-        REM"!pg_ctlPath!" -D "!postgre_data!" -l "!postgre_log!" start
-    )    
+        break > "!postgre_log!"
+        "!pg_ctlPath!" -D "!postgre_data!" -l "!postgre_log!" start
+    )
     call 
 ) || (
     echo "ERROR: Need to install PostgreSQL" 1>&2
