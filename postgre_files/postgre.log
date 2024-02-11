@@ -3,3 +3,22 @@
 2024-02-11 01:27:56.127 EST [15504] LOG:  listening on IPv4 address "127.0.0.1", port 5432
 2024-02-11 01:27:56.366 EST [7556] LOG:  database system was shut down at 2024-02-11 01:27:39 EST
 2024-02-11 01:27:56.412 EST [15504] LOG:  database system is ready to accept connections
+2024-02-11 02:37:16.918 EST [4067] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-02-11 02:37:16.940 EST [4067] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-02-11 02:37:17.032 EST [4068] LOG:  database system was shut down at 2024-02-11 02:37:16 EST
+2024-02-11 02:37:17.061 EST [4067] LOG:  database system is ready to accept connections
+2024-02-11 03:08:04.663 EST [4067] LOG:  received smart shutdown request
+2024-02-11 03:08:04.691 EST [4067] LOG:  worker process: logical replication launcher (PID 4074) exited with exit code 1
+2024-02-11 03:08:04.691 EST [4069] LOG:  shutting down
+2024-02-11 03:08:04.803 EST [4067] LOG:  database system is shut down
+2024-02-11 03:09:05.892 EST [5158] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-02-11 03:09:05.914 EST [5158] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-02-11 03:09:06.005 EST [5159] LOG:  database system was shut down at 2024-02-11 03:09:05 EST
+2024-02-11 03:09:06.034 EST [5158] LOG:  database system is ready to accept connections
+2024-02-11 03:09:08.673 EST [5184] FATAL:  database "/home/yescomputer/Documents/Codeing/pokedex/postgre_files" does not exist
+2024-02-11 03:10:41.749 EST [5241] FATAL:  database "/home/yescomputer/Documents/Codeing/pokedex/postgre_files/postg" does not exist
+2024-02-11 03:11:57.675 EST [5294] FATAL:  database "/home/yescomputer/Documents/Codeing/pokedex/postgre_files/postg" does not exist
+2024-02-11 03:12:33.864 EST [5355] FATAL:  database "/home/yescomputer/Documents/Codeing/pokedex/postgre_files/postg" does not exist
+2024-02-11 03:14:01.475 EST [5430] FATAL:  database "/home/yescomputer/Documents/Codeing/pokedex/postgre_files/postg" does not exist
+2024-02-11 03:15:30.612 EST [5502] FATAL:  database "/home/yescomputer/Documents/Codeing/pokedex/postgre_files/postg" does not exist
+2024-02-11 03:17:21.802 EST [5574] FATAL:  database "./postgre_files/postgre_data" does not exist

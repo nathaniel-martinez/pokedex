@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 
 //selectable list of trainers
 app.get("/trainers", (req, res) => {
-	let selectorPath = pathFinder.getViewsPath() + path.sep + "selector.ejs";
+	let selectorPath = pathFinder.getViewsPath(true, "selector.ejs");
 
 	res.set('Content-Type', 'text/html');
 	res.sendFile(selectorPath);
@@ -23,7 +23,7 @@ app.get("/trainers", (req, res) => {
 
 //link css file to trainers selector
 app.get("/trainers/style.css", (req, res) => {
-	let selectorStylePath = pathFinder.getStylePath() + path.sep + "selector.css";
+	let selectorStylePath = pathFinder.getStylePath(true, "selector.css");
 
 	res.set('content-type', 'text/css');
 	res.sendFile(selectorStylePath);
