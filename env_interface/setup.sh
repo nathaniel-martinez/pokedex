@@ -85,11 +85,11 @@ else
 		$pg_ctlPath init -D $postgre_data
 		echo '***Start Process***'
 		$pg_ctlPath -D $postgre_data -l $postgre_log start
-		echo '***Run Database Intrcs'
+		echo '***Modify Database***'
 		$psqlPath -d template1 <<-EOF
 			CREATE USER pokedexuser WITH PASSWORD 'pokedex';
 			CREATE DATABASE $USER;
-			CREATE DATABASE pokexuser;
+			CREATE DATABASE pokedexuser;
 			CREATE DATABASE pokedexdb;
 			REVOKE ALL ON DATABASE pokedexdb FROM pokedexuser;
 			GRANT CONNECT ON DATABASE pokedexdb TO pokedexuser;
