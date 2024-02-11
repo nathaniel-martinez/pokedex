@@ -13,5 +13,5 @@ else if(process.platform = "darwin"){
 
 }
 else if(process.platform = "win32"){
-
+	let fun = '
 }

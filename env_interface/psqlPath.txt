@@ -1,3 +1,0 @@
-/usr/share/bash-completion/completions/psql
-/usr/share/postgresql-common/pg_wrapper
-/usr/lib/postgresql/10/bin/psql
