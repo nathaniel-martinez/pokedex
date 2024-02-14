@@ -2,7 +2,7 @@ const os = require("os");
 const cp = require("child_process");
 const path = require("path");
 const pathFinder = require("." + path.sep + "env_interface" + path.sep + "pathfinder.js");
-const { Sequelize } = require("sequelize");
+const { Sequelize, DataType } = require("sequelize");
 
 async function populateDb(){
 	const sequelize = new Sequelize("pokedexdb", "pokedexuser", "pokedex", {
@@ -16,6 +16,8 @@ async function populateDb(){
 	} catch (error) {
 		console.error('Unable to connect to the database:', error);
 	}
+
+	
 }
 
 
