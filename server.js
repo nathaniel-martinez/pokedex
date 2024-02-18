@@ -1,5 +1,5 @@
 const path = require("path");
-const pathFinder = require("." + path.sep+ "env_interface" + path.sep + "pathfinder");
+const absPath = require("." + path.sep+ "env_interface" + path.sep + "pathfinder");
 const express = require("express");
 const app = express();
 const port = 3000;
@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 
 //selectable list of trainers
 app.get("/trainers", (req, res) => {
-	let selectorPath = pathFinder.getViewsPath(true, "selector.ejs");
+	let selectorPath = absPath(["styles", "selector.ejs"]);
 
 	res.set('Content-Type', 'text/html');
 	res.sendFile(selectorPath);
@@ -23,7 +23,7 @@ app.get("/trainers", (req, res) => {
 
 //link css file to trainers selector
 app.get("/trainers/style.css", (req, res) => {
-	let selectorStylePath = pathFinder.getStylePath(true, "selector.css");
+	let selectorStylePath = absPath(["style", "selector.css"]);
 
 	res.set('content-type', 'text/css');
 	res.sendFile(selectorStylePath);

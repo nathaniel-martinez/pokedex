@@ -19,6 +19,20 @@ function getLocalRoot(getFirstSep=true){
 	return localRootPath;
 }
 
+/*
+ * Use this function to get any abs file path inside the project directory. This path must be
+ * called with a working directory inside of the file path
+ * @input: fileArr is an array with strings to the filePath
+ * @output: an abs file path with the fileArr in the path
+ * */
+function getAbsPath(fileArr){
+	absPath = getLocalRoot();
+	for(file of fileArr){
+		absPath = path.sep + file
+	}
+	return absPath
+}
+
 /* This function finds the path of the views directory regardless of operating system or
  * current filesystem location as long as the filesystem location is inside the project
  * @param: [getFirstSep] that when false removes the root file path seperator, [file name]
@@ -56,12 +70,12 @@ function getStylePath(getFirstSep=true, file=""){
  * appended at end of path
  * @output: Absolute path of public directory
  */
-function getEnvInterfacePath(getFirstSep=true, file=""){
+function getEnvInterfacePath(file=""){
 	if(file != ""){
-		return getLocalRoot(getFirstSep) + path.sep + "env_interface" + path.sep + file;
+		return getLocalRoot(true) + path.sep + "env_interface" + path.sep + file;
 	}
 	else{
-		return getLocalRoot(getFirstSep) + path.sep + "env_interface";
+		return getLocalRoot(true) + path.sep + "env_interface";
 	}
 }
 
@@ -71,12 +85,29 @@ function getEnvInterfacePath(getFirstSep=true, file=""){
  * appended at end of path
  * @output: Absolute path of public directory
  */
-function getPostgreFilesPath(getFirstSep=true, file=""){
+function getPostgreFilesPath(file=""){
 	if(file != ""){
-		return getLocalRoot(getFirstSep) + path.sep + "postgre_files" + path.sep + file;
+		return getLocalRoot(true) + path.sep + "postgre_files" + path.sep + file;
 	}
 	else{
-		return getLocalRoot(getFirstSep) + path.sep + "postgre_files";
+		return getLocalRoot(true) + path.sep + "postgre_files";
 	}
 }
-module.exports = { getViewsPath, getStylePath, getEnvInterfacePath, getPostgreFilesPath };
+
+
+/* This function finds the path of the server_data  directory regardless of operating system or
+ * current filesystem location as long as the filesystem location is inside the project
+ * @param: getFirstSep that when false removes the root file path seperator, [file name / Path]
+ * appended at end of path
+ * @output: Absolute path of public directory
+ */
+function getServerDataPath(file=""){
+	if(file != ""){
+		return getLocalRoot(true) + path.sep + "server_data" + path.sep + file;
+	}
+	else{
+		return getLocalRoot(true) + path.sep + "server_data";
+	}
+}
+
+export default getAbsPath;
