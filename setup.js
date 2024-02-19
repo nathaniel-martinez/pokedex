@@ -3,7 +3,7 @@ const cp = require("child_process");
 const path = require("path");
 const absPath = require("." + path.sep + "env_interface" + path.sep + "pathfinder.js");
 const { Sequelize, DataType } = require("sequelize");
-const trainerObjs = require(getServerDataPath(["trainers.json"]));
+const trainerObjs = require(absPath(["server_data", "trainers.json"]));
 
 async function populateDb(){
 	const sequelize = new Sequelize("pokedexdb", "pokedexuser", "pokedex", {
@@ -18,7 +18,37 @@ async function populateDb(){
 		console.error('Unable to connect to the database:', error);
 	}
 
-	console.log(trainerObjs);
+	const Trainer = Sequelize.define("trainer", {
+		name: {
+			type: DataType.STRING,
+			allowNull: false
+		},
+		img: {
+			type: DataType.TEXT,
+			allowNull: false
+		}
+	});
+
+	const Pokemon = Sequelize.define("pokemon", {
+		name: {
+			type: DataType.STRING,
+			allowNull: false
+		},
+		attrType: {
+			type: DataType.STRING,
+			allowNull: false
+		},
+		desc: {
+			type: DataType.TEXT,
+			allowNull: false
+		},
+		img: {
+			type: DataType.TEXT,
+			allowNull: false
+		}
+	});
+	Pokemon.belongsToMany(Trainer, { through: 'PokemonTrainers' };
+	Trainer.belongsToMany(Pokemon, { through: 'PokemonTrainers' };
 }
 
 

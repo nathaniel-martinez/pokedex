@@ -22,3 +22,11 @@
 2024-02-11 03:14:01.475 EST [5430] FATAL:  database "/home/yescomputer/Documents/Codeing/pokedex/postgre_files/postg" does not exist
 2024-02-11 03:15:30.612 EST [5502] FATAL:  database "/home/yescomputer/Documents/Codeing/pokedex/postgre_files/postg" does not exist
 2024-02-11 03:17:21.802 EST [5574] FATAL:  database "./postgre_files/postgre_data" does not exist
+2024-02-18 18:58:30.207 EST [16486] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-02-18 18:58:30.236 EST [16486] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-02-18 18:58:30.384 EST [16487] LOG:  database system was interrupted; last known up at 2024-02-11 03:14:09 EST
+2024-02-18 18:58:30.720 EST [16487] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-02-18 18:58:30.753 EST [16487] LOG:  redo starts at 0/163EC48
+2024-02-18 18:58:30.753 EST [16487] LOG:  invalid record length at 0/163ED28: wanted 24, got 0
+2024-02-18 18:58:30.753 EST [16487] LOG:  redo done at 0/163ECF0
+2024-02-18 18:58:30.931 EST [16486] LOG:  database system is ready to accept connections

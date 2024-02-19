@@ -28,7 +28,7 @@ function getLocalRoot(getFirstSep=true){
 function getAbsPath(fileArr){
 	absPath = getLocalRoot();
 	for(file of fileArr){
-		absPath = path.sep + file
+		absPath = absPath + path.sep + file
 	}
 	return absPath
 }
@@ -110,4 +110,4 @@ function getServerDataPath(file=""){
 	}
 }
 
-export default getAbsPath;
+module.exports = getAbsPath;

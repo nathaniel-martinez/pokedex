@@ -95,6 +95,10 @@ else
 			GRANT CONNECT ON DATABASE pokedexdb TO pokedexuser;
 			GRANT SELECT ON ALL TABLES IN SCHEMA public TO pokedexuser;
 EOF
+	else
+		echo "****Starting PostgreSQL server****"
+		$pg_ctlPath -D $postgre_data -l $postgre_log start
+		
 	fi
 	if [ -z $(cat /etc/group | grep -G '^postgres' | cut -f 4 -d ':' | grep -E "$USER(,(.*))?$") ]
 	then
