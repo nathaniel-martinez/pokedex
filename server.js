@@ -1,5 +1,5 @@
 const path = require("path");
-const absPath = require("." + path.sep+ "env_interface" + path.sep + "pathfinder");
+const absPath = require("." + path.sep+ "enviroment-interface" + path.sep + "pathfinder");
 const express = require("express");
 const app = express();
 const port = 3000;
